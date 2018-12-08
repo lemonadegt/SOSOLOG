@@ -25,11 +25,9 @@ module.exports = {
     author: {
       name: '소영이',
       email: 'ethdud1@gmail.com',
-      telegram: '0104135',
-      twitter: '#',
+      twitter: 'th096',
       github: 'SoYoung210',
-      rss: '#',
-      vk: '#',
+
     },
   },
   plugins: [
