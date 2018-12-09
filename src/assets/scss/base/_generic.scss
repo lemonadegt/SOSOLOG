@@ -29,6 +29,7 @@ h6 {
 }
 
 h1 {
+  word-break: keep-all;
   font-size: $typographic-base-font-size * 2.5;
   @include line-height(2);
   @include margin-top(4);
