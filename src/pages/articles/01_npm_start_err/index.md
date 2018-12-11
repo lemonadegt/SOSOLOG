@@ -3,7 +3,7 @@ title: NPM START ERROR?
 date: '2018-12-05T22:40:32.169Z'
 layout: post
 draft: false
-path: '/posts/the-origins-of-social-stationery-lettering'
+path: '/posts/npm-start-error'
 category: 'Bug Report'
 tags:
   - 'npm'
