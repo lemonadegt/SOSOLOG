@@ -7,7 +7,7 @@ module.exports = {
     title: '소소로그',
     subtitle: '소영이의 소소한 소소로그, ',
     copyright: '© All rights reserved.',
-    disqusShortname: '',
+    disqusShortname: 'SOYOUNG',
     menu: [
       {
         label: 'Articles',
@@ -118,7 +118,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' },
+      options: { trackingId: 'UA-130596613-1' },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',

@@ -101,7 +101,7 @@ $ gatsby new [BLOGNAME]https://github.com/GatsbyCentral/gatsby-v2-starter-lumen
 
    markdown 형식으로 작성하면 된다.
 
-1. style 
+3. style 
    화면에 보여지는 형식을 바꾸고 싶다면, 다음 방법을 사용하면 된다. 
    예를 들어, 마크다운 문법 중 인용문구에 대한 스타일을 변경하고 싶다고 가정해 보자. 
 
@@ -127,6 +127,26 @@ $ gatsby new [BLOGNAME]https://github.com/GatsbyCentral/gatsby-v2-starter-lumen
 
   ![image-2018120802](./imgae-20181208-2.jpeg) 
 
+## Disqus
+lumen 테마는 기본적으로 Disqus 기능을 제공하고 있다.  
+`gatsby-config.js` 에서 `disqusShortname` 의 값을 '' 이 아니라 특정 값으로 채워주면, Disqus 기능이 활성화 된다.  
+
+```markdown
+module.exports = {
+  siteMetadata: {
+    ...
+    title: '소소로그',
+    subtitle: '소영이의 소소한 소소로그, ',
+    copyright: '© All rights reserved.',
+    disqusShortname: 'SOYOUNG',
+    ...
+  }
+  ...
+}
+```
+
+<image src="./image-20181209-1.jpeg" >
+
 ## Deploy
 
 배포는 [Netlify](https://app.netlify.com/) 를 사용했다.  
@@ -151,8 +171,26 @@ $ gatsby new [BLOGNAME]https://github.com/GatsbyCentral/gatsby-v2-starter-lumen
 배포 브랜치는 기본적으로 `master`   브랜치 이고 이 설정도 변경 가능하다. 
 
 
+자 이제 첫 배포가 끝났다! 
 
-자 이제 첫 배포가 끝났다! 이
+## Google Analytics
+내 블로그에 몇명이나 들어왔는지, 어떤 글이 인기 있는지 모니터링 하는 과정도 재미있고, 필요하다.  
+**Google Analytics** 설정을 해주자.  
+역시, `gatsby-config.js` 에서 특정 값을 바꾸어 주면 된다. 
+
+```markdown
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: { trackingId: 'YOUR_TRACKINGID' },
+    },
+```
+
+YOUR_TRACKINGID 값을 실제 값으로 변경 해주면 된다.  
+[Google Analytics](https://analytics.google.com/) 에 가입하고, 블로그 주소를 입력하면 기본 셋팅이 끝난다.  
+이 페이지에서 `관리자 > 추적 정보 > 추적 코드` 에서 추적 ID를 확인할 수 있다.  
+
+<image src="./image-20181209-2.jpeg" >
 
 ## Keep Going!
 
