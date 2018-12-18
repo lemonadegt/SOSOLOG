@@ -38,7 +38,7 @@ class Checkbox extends React.Component {
 
 이러한 syntax는 React 0.13이 2015년 class에 대한 지원을 추가할때 [계획](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html#es7-property-initializers) 되었다. 
 
-`constructor` 를 정의하고, `super(props` 를 정의하는 것은 `class fields` 가 좋은 제안을 제시하기 전까지의 임사방편으로 여겨졌다.
+`constructor` 를 정의하고, `super(props)` 를 정의하는 것은 `class fields` 가 좋은 제안을 제시하기 전까지의 임사방편으로 여겨졌다.
 
 
 
@@ -60,9 +60,9 @@ lass Checkbox extends React.Component {
 
 ------
 
-JS에서 `super` 는 부모 클래스 생성자를 참조한다. (이 예에서는 React.Component)
+JS에서 `super` 는 부모 클래스 생성자를 참조한다. (부모 클래스 : React.Component)
 
-중요한 것은, 부모 생성자를 호출할 때 까지 자식 클래스 생성자에서 `this` 를 사용할 수 없다는 것이다. 
+중요한 것은, 부모 클래스 생성자를 호출할 때 까지 자식 클래스 생성자에서 `this` 를 사용할 수 없다는 것이다. 
 
 ```jsx
 class Checkbox extends React.Component {
@@ -76,7 +76,7 @@ class Checkbox extends React.Component {
 }
 ```
 
-JS 가 `this` 에 접근하기 전에 부모 클래스 생성자를 호출하도록 강제하는 좋은 이유가 있다. 
+JS 가 `this` 에 접근하기 전에 부모 클래스 생성자를 호출하도록 강제하는 이유가 있다. 
 
 클래스 계층 구조를 생각해 보자. 
 
@@ -100,9 +100,7 @@ class PolitePerson extends Person {
 
 `super` 호출을 하기 전에, `this` 를 사용한다고 상상해 보자. 
 
-> 가정 시작!
-
-한달 후에 , `greetColleagues` 에 `person's name` 이 포함되도록 변경하고 싶다고 해보자. 
+한달 후에 , `greetColleagues` 에 `person's name` 이 포함되도록 변경하고 싶다고 가정 해보자. 
 
 ```jsx
 greetColleagues() {
@@ -111,11 +109,11 @@ greetColleagues() {
 }
 ```
 
-다시 PolitePerson 클래스 코드를 보자. 
+다시 `PolitePerson` 클래스 코드를 보자. 
 
- `this.greetColleagues()` 는 `super` 가 호출되기 전에 호출됐다. 
+ `this.greetColleagues()` 는 `super` 가 호출되기 전에 호출 되었다. 
 
-this.name 이 설정 되기 전에 호출이 되었고, 정의되기 전이다. 
+`this.name` 이 설정 되기 전에 호출 되었고, 정의되기 전이다. 
 
 이 예제에서 보다시피, 이런 상황(코드) 은 미리 생각하기 매우 어려울 수 있다. 
 
@@ -171,19 +169,22 @@ class Component {
 
 React가 클래스에 대한 지원을 추가할 때, 단순히 ES6 클래스만 추가한 것이 아니다. 
 
-목표는 클래스 가능한한, **광범위한 추상화** 를 지원하는 것이었다. 
+목표는, 가능한한 **광범위한 추상화** 를 지원하는 것이었다. 
 
-> Comment : 광범위한 추상화가 조금 와닿지 않지만, 이렇게 번역했습니다. 
+> Comment : 광범위한 추상화가 조금 와닿지 않지만, 이렇게 번역했습니다.   
+  원문 : The goal was to support as wide range of class abstractions as possible.  
 
 ClojureScript, CoffeeScript, ES6, Fable, Scala.js, TypeScript 또는 기타 솔루션이 component를 정의하는 데 얼마나 성공적 이었는지 분명하지 않았다. 
 
 그래서 React는 ES6클래스가 있더라도 `super()` 호출이 필요한지에 대해 **고의적으로** 알리지 않았었다. 
 
-> Comment : 고의적으로 === 일부러.
+> Comment : 고의적으로 === 일부러.   
+원문 : So React was intentionally unopinionated about whether calling super() is required 
 
 그래서, **super(props) 대신 super() 를 쓸 수 있다는 뜻인가?**
 
-물론, React는 생성자가 호출된 후에 `this.props` 를 할당할 것입니다. 하지만, `this.props` 는 `super` 호출과 `constructor` 함수의 마지막 사이에 여전히 **정의되지 않았다.**
+물론, React는 생성자가 호출된 후에 `this.props` 를 할당할 것이다.   
+하지만, `this.props` 는 `super` 호출과 `constructor` 함수의 마지막 사이에 여전히 **정의되지 않았다.**
 
 ```js
 // Inside React
@@ -205,7 +206,7 @@ class Button extends React.Component {
 }
 ```
 
-이런 코드는 디버그 하기 어려운 상황을 만들 수 있다. 그래서, 꼭 props를 넘길 필요가 없더라고 넘기는 것이 좋다. 
+이런 코드는 디버그 하기 어려운 상황을 만들 수 있다. 그래서, 꼭 `props` 를 넘길 필요가 없더라고 넘기는 것이 좋다. 
 
 ```js
 lass Button extends React.Component {
