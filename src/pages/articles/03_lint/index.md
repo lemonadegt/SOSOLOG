@@ -2,7 +2,7 @@
 title:  ESLint + Prettier 로 코드 퀄리티 높이기
 date: '2018-12-18T22:40:32.169Z'
 layout: post
-draft: false
+draft: true
 path: '/posts/eslint-prettier'
 category: 'Cooperation'
 tags:
