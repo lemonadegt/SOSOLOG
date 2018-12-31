@@ -3,7 +3,7 @@ title:  번역_Why Do We Write super(props)?
 date: '2018-12-11T22:40:32.169Z'
 layout: post
 draft: false
-path: '/posts/why-do-we-wrhite-super-props'
+path: '/posts/why-do-we-write-super-props'
 category: 'Translation'
 tags:
   - 'React'
