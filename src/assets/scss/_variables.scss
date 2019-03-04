@@ -12,8 +12,13 @@ $color-gray: lighten($color-base, 40%);
 $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
 
+// code
+$inline-dimmed-color: #ece5f1;
+$inline-text-color: #4b2043;
+
 // Typographic
-$typographic-font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typographic-font-family: 'Noto Sans', 'Roboto', 'Helvetica Neue', 'Helvetica',
+  'Arial', sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;
@@ -25,7 +30,9 @@ $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
 
-$typographic-leading: round(16 * ($typographic-root-font-size / 100) * $typographic-base-line-height);
+$typographic-leading: round(
+  16 * ($typographic-root-font-size / 100) * $typographic-base-line-height
+);
 
 // Layout
 $layout-post-single-max-width: 945px;

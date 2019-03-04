@@ -7,7 +7,12 @@ html {
 }
 
 body {
-  font-family: $typographic-font-family;
+  text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
   color: $typographic-base-font-color;
   line-height: $typographic-base-line-height;
   font-size: $typographic-base-font-size;
@@ -38,7 +43,7 @@ h1 {
 
 h2 {
   font-size: $typographic-base-font-size * 1.6875;
-       font-weight: 600; 
+  font-weight: 600;
   @include line-height(1.5);
   @include margin-top(2);
   @include margin-bottom(0.5);
@@ -133,8 +138,8 @@ p {
 blockquote {
   padding: 0;
 
-  color: #979797;
-  p{
+  color: #999;
+  p {
     padding-left: 13px;
     border-left: 4px solid #979797;
   }
