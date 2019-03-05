@@ -53,7 +53,7 @@ description: '공식문서에서부터 출발해보자.'
 - **제작자가 제안하는** 방법은 무엇인지
 - 기초를 익히기 위해서는 어떤 튜토리얼을 제공해야 하는지
 
-등이 모두 고려된 문서가 react.org 의 문서이다.
+등이 모두 고려된 문서가 reactjs.org 의 문서이다.
 
 > 결론 : React 공식문서는 잘 정리된 공식문서라고 생각합니다.
 
@@ -88,9 +88,9 @@ API Docs를 처음 보았을 때, 이 api가 `async` 인지 `sync` 인지까지 
 
 #### 아쉬웠던 점.
 
-usage에 대한 언급이 없다.  
-[CloneOptions](https://www.nodegit.org/api/clone_options/#checkoutBranch)
-가령, 위의 링크에서 checkout-branch API 를 살펴본다고 했을 때, 실질적인 사용코드를 제공하지 않아서 추상적으로 느껴졌다.
+usage에 대한 언급이 없다.
+
+가령, [CloneOptions](https://www.nodegit.org/api/clone_options/#checkoutBranch) 에서 checkout-branch API 를 살펴본다고 했을 때, 실질적인 사용코드를 제공하지 않아서 추상적으로 느껴졌다.
 들어가는 Parameters 만 보고 해당 사용을 유추해야 하고, 이 과정에서 잘못사용하면 버그가 발생할 확률이 높다.
 
 그리고, 버그가 발생했을 때 해결하는 과정 또한 오래걸린다.
