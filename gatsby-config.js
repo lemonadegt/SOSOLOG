@@ -3,7 +3,7 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
+    url: 'https://sosolog.netlify.com',
     title: '소소로그',
     subtitle: '소영이의 소소한 소소로그, ',
     copyright: '© All rights reserved.',
@@ -27,7 +27,6 @@ module.exports = {
       email: 'ethdud1@gmail.com',
       twitter: 'th096',
       github: 'SoYoung210',
-
     },
   },
   plugins: [
